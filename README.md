@@ -17,7 +17,35 @@ A modern Android app built with Jetpack Compose that displays comprehensive devi
 - **System Info** - Android version, security patch, manufacturer details, and kernel info
 - **Network Status** - Wi-Fi/mobile network details with real-time connectivity monitoring
 - **Sensor Monitoring** - Real-time data from all available device sensors
-- **Export & Share** - Generate and share comprehensive device reports
+
+## Screenshots
+
+<div align="center">
+
+### Feature Graphic
+![Feature Graphic](screenshots/feature_graphic.png)
+
+### App Screens
+
+| Overview | Hardware | System |
+|:--------:|:--------:|:------:|
+| ![Overview](screenshots/overview.png) | ![Hardware](screenshots/hardware.png) | ![System](screenshots/system.png) |
+
+| Network | Sensors |
+|:-------:|:-------:|
+| ![Network](screenshots/network.png) | ![Sensors](screenshots/sensors.png) |
+
+### Additional Screenshots
+
+| Overview 2 | Hardware 2 | System 2 |
+|:----------:|:----------:|:--------:|
+| ![Overview 2](screenshots/overview2.png) | ![Hardware 2](screenshots/hardware2.png) | ![System 2](screenshots/system2.png) |
+
+| Network 2 | Sensors 2 |
+|:---------:|:---------:|
+| ![Network 2](screenshots/network2.png) | ![Sensors 2](screenshots/sensors2.png) |
+
+</div>
 
 ## Tech Stack
 
