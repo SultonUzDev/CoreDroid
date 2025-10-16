@@ -4,7 +4,9 @@ package com.sultonuzdev.coredroid.presentation.screens.hardware
 import com.sultonuzdev.coredroid.core.base.LoadingInfo
 import com.sultonuzdev.coredroid.core.base.MviContract
 import com.sultonuzdev.coredroid.core.base.UiState
-import com.sultonuzdev.coredroid.domain.model.*
+import com.sultonuzdev.coredroid.domain.model.CameraInfo
+import com.sultonuzdev.coredroid.domain.model.CpuInfo
+import com.sultonuzdev.coredroid.domain.model.DisplayInfo
 
 object HardwareContract : MviContract {
 

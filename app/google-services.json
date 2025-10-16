@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "962778338929",
+    "project_id": "coredroid-95666",
+    "storage_bucket": "coredroid-95666.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962778338929:android:2ed3ab48d83c6fce07edd0",
+        "android_client_info": {
+          "package_name": "com.sultonuzdev.coredroid.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAU1YgSKGvNRQJie-3HOKcmEcGODIFj1Rs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -10,41 +10,39 @@ import com.sultonuzdev.coredroid.domain.usecase.camera.*
 import com.sultonuzdev.coredroid.domain.usecase.system.*
 import com.sultonuzdev.coredroid.domain.usecase.sensor.*
 import com.sultonuzdev.coredroid.domain.usecase.overview.*
-import com.sultonuzdev.coredroid.domain.usecase.export.*
+import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
 
 val domainModule = module {
-    factory { GetBatteryInfoUseCase(get()) }
-    factory { MonitorBatteryUseCase(get()) }
+    singleOf(::GetBatteryInfoUseCase)
+    singleOf(::MonitorBatteryUseCase)
 
     // Storage Use Cases
-    factory { GetStorageInfoUseCase(get()) }
+    singleOf(::GetStorageInfoUseCase)
 
     // Network Use Cases
-    factory { GetNetworkInfoUseCase(get()) }
-    factory { MonitorNetworkStateUseCase(get()) }
+    singleOf(::GetNetworkInfoUseCase)
+    singleOf(::MonitorNetworkStateUseCase)
 
     // Display Use Cases
-    factory { GetDisplayInfoUseCase(get()) }
+    singleOf(::GetDisplayInfoUseCase)
 
     // CPU Use Cases
-    factory { GetCpuInfoUseCase(get()) }
-    factory { MonitorCpuUsageUseCase(get()) }
+    singleOf(::GetCpuInfoUseCase)
+    singleOf(::MonitorCpuUsageUseCase)
 
     // Camera Use Cases
-    factory { GetCameraInfoUseCase(get()) }
+    singleOf(::GetCameraInfoUseCase)
 
     // System Use Cases
-    factory { GetSystemInfoUseCase(get()) }
+    singleOf(::GetSystemInfoUseCase)
 
     // Sensor Use Cases
-    factory { GetAvailableSensorsUseCase(get()) }
-    factory { MonitorSensorDataUseCase(get()) }
+    singleOf(::GetAvailableSensorsUseCase)
+    singleOf(::MonitorSensorDataUseCase)
 
     // Overview Use Cases
-    factory { GetDeviceOverviewUseCase(get(), get(), get(), get()) }
+    singleOf(::GetDeviceOverviewUseCase)
 
-    // Export Use Cases
-    factory { ExportDeviceReportUseCase(get()) }
-    factory { ShareDeviceReportUseCase(get()) }
+
 }

@@ -1,9 +1,12 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
     id("com.google.devtools.ksp")
     id("kotlin-parcelize")
     kotlin("plugin.serialization")
+    alias(libs.plugins.google.gms.google.services)
+    alias(libs.plugins.google.firebase.crashlytics)
 }
 
 android {
@@ -60,10 +63,6 @@ android {
         buildConfig = true
     }
 
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
-    }
-
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -93,31 +92,22 @@ dependencies {
     // Coroutines
     implementation(libs.bundles.coroutines)
 
-    // Database
-    implementation(libs.bundles.room)
-    ksp(libs.room.compiler)
 
     // DataStore
     implementation(libs.datastore.preferences)
 
-    // Networking (Optional)
-    implementation(libs.bundles.networking)
+
     implementation(libs.kotlinx.serialization.json)
 
-    // Image Loading
-    implementation(libs.coil.compose)
+
 
     // Permissions
     implementation(libs.accompanist.permissions)
 
     // Utilities
     implementation(libs.timber)
-    implementation(libs.lottie.compose)
+    implementation(libs.firebase.crashlytics)
 
-    // PDF Export
-    implementation(libs.itext.core)
-    implementation(libs.apache.poi)
-    implementation(libs.apache.poi.ooxml)
 
     // Testing
     testImplementation(libs.bundles.testing)

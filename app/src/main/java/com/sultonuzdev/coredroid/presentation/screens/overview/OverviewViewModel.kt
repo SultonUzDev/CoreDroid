@@ -9,7 +9,6 @@ import com.sultonuzdev.coredroid.core.base.LoadingInfo
 import com.sultonuzdev.coredroid.domain.usecase.overview.GetDeviceOverviewUseCase
 import com.sultonuzdev.coredroid.domain.usecase.battery.GetBatteryInfoUseCase
 import com.sultonuzdev.coredroid.domain.usecase.storage.GetStorageInfoUseCase
-import com.sultonuzdev.coredroid.domain.usecase.export.ExportDeviceReportUseCase
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.combine
@@ -20,7 +19,6 @@ class OverviewViewModel(
     private val getDeviceOverviewUseCase: GetDeviceOverviewUseCase,
     private val getBatteryInfoUseCase: GetBatteryInfoUseCase,
     private val getStorageInfoUseCase: GetStorageInfoUseCase,
-    private val exportDeviceReportUseCase: ExportDeviceReportUseCase
 ) : BaseViewModel<OverviewContract.State, OverviewContract.Intent, OverviewContract.Effect>(
     OverviewContract.State()
 ) {

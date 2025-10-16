@@ -8,13 +8,14 @@ import com.sultonuzdev.coredroid.presentation.screens.network.NetworkViewModel
 import com.sultonuzdev.coredroid.presentation.screens.sensors.SensorsViewModel
 import com.sultonuzdev.coredroid.presentation.screens.sensors.details.SensorDetailsViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.androidx.viewmodel.dsl.viewModelOf
 import org.koin.dsl.module
 
 val presentationModule = module {
-    viewModel { OverviewViewModel(get(), get(), get(),get()) }
-    viewModel { HardwareViewModel(get(), get(), get()) }
-    viewModel { SystemViewModel(get()) }
-    viewModel { NetworkViewModel(get(), get()) }
-    viewModel { SensorsViewModel(get(), get()) }
-    viewModel { SensorDetailsViewModel(get(), get()) }
+    viewModelOf(::OverviewViewModel)
+    viewModelOf(::HardwareViewModel)
+    viewModelOf(::SystemViewModel)
+    viewModelOf(::NetworkViewModel)
+    viewModelOf(::SensorsViewModel)
+    viewModelOf(::SensorDetailsViewModel)
 }
