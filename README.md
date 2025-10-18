@@ -554,7 +554,7 @@ Examples:
 
 ---
 
-**Document Version:** 3.0 (Clean Architecture)
-**Last Updated:** 2025-10-17
-**Author:** SultonUzDev with Claude Code
-**Project:** CoreDroid Multi-Module Architecture
+- **Document Version:** 3.0 (Clean Architecture)
+- **Last Updated:** 2025-10-17
+- **Author:** SultonUzDev with Claude Code
+- **Project:** CoreDroid Multi-Module Architecture
