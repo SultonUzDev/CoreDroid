@@ -30,7 +30,7 @@
         android:theme="@style/Theme.CoreDroid"
         tools:targetApi="33">
         <activity
-            android:name=".presentation.MainActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.CoreDroid">
             <intent-filter>
