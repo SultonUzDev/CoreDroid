@@ -15,7 +15,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
             pluginManager.apply {
                 apply("coredroid.android.library")
                 apply("coredroid.android.compose")
-                apply("coredroid.koin")
+                apply("coredroid.android.koin")
             }
             extensions.configure<LibraryExtension> {
                 defaultConfig {

@@ -18,6 +18,9 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
                 apply("org.jetbrains.kotlin.android")
             }
             extensions.configure<LibraryExtension> {
+                // Auto-calculate namespace from project path
+                // e.g., :feature:battery -> com.sultonuzdev.coredroid.feature.battery
+                namespace = "${ProjectConfig.namespace}${path.replace(":", ".").replace("-", ".")}"
                 configureKotlinAndroid(this)
                 lint.targetSdk = ProjectConfig.targetSdk
 

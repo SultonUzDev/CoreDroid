@@ -17,6 +17,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                 apply("org.jetbrains.kotlin.android")
             }
             extensions.configure<ApplicationExtension> {
+                namespace = ProjectConfig.namespace
                 configureKotlinAndroid(this)
 
                 defaultConfig {

@@ -1,10 +1,8 @@
 package com.sultonuzdev.coredroid.buildlogic
 
-import com.android.tools.r8.internal.wi
 import com.sultonuzdev.coredroid.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.internal.serialize.codecs.core.NodeOwner
 import org.gradle.kotlin.dsl.dependencies
 
 class KoinConventionPlugin : Plugin<Project> {

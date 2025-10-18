@@ -154,7 +154,9 @@ koin = [
     "koin-core"
 ]
 
-
+koin-test = [
+    "koin-test"
+]
 
 coroutines = [
     "kotlinx-coroutines-core",
