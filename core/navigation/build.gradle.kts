@@ -7,7 +7,6 @@ plugins {
 
 
 dependencies {
-    implementation(project(":core:model"))
     implementation(libs.navigation.compose)
 }
 

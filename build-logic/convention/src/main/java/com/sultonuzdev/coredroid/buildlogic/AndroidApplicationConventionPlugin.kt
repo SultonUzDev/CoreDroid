@@ -42,7 +42,6 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                     }
                     debug {
                         isMinifyEnabled = false
-                        applicationIdSuffix = ".debug"
                         isDebuggable = true
                     }
 

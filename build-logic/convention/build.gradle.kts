@@ -1,7 +1,7 @@
 plugins {
     `kotlin-dsl`
 }
-group = "com.sultonuzdev.coredroid.buildlogic"
+group = "com.sultonuzdev.coredroidfull.buildlogic"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
@@ -43,9 +43,9 @@ gradlePlugin {
             id = "coredroid.android.test"
             implementationClass = "com.sultonuzdev.coredroid.buildlogic.AndroidTestConventionPlugin"
         }
-        register("koin") {
-            id = "coredroid.android.koin"
-            implementationClass = "com.sultonuzdev.coredroid.buildlogic.KoinConventionPlugin"
+        register("hilt") {
+            id = "coredroid.android.hilt"
+            implementationClass = "com.sultonuzdev.coredroid.buildlogic.HiltConventionPlugin"
         }
 
 

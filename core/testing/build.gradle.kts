@@ -9,7 +9,6 @@ plugins {
 
 dependencies {
     // ✅ Testing utilities need model fakes
-    implementation(project(":core:model"))
     implementation(project(":core:common"))
     
     // ✅ Testing-specific libraries

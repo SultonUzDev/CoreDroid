@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.sultonuzdev.coredroid.debug" />
-                  <option name="mobileSdkAppId" value="1:962778338929:android:2ed3ab48d83c6fce07edd0" />
-                  <option name="projectId" value="coredroid-95666" />
-                  <option name="projectNumber" value="962778338929" />
+                  <option name="appId" value="com.sultonuzdev.coredroidfull" />
+                  <option name="mobileSdkAppId" value="1:686004247269:android:8c744e6890f4e5f68b920c" />
+                  <option name="projectId" value="coredroid-19850" />
+                  <option name="projectNumber" value="686004247269" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

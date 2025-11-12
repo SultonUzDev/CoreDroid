@@ -10,16 +10,16 @@ val Project.libs: VersionCatalog
     get() = extensions.getByType<VersionCatalogsExtension>().named("libs")
 
 object ProjectConfig {
-    const val compileSdk = 35
+    const val compileSdk = 36
     const val minSdk = 27
-    const val targetSdk = 34
+    const val targetSdk = 36
 
     const val applicationId = "com.sultonuzdev.coredroid"
     const val namespace = "com.sultonuzdev.coredroid"
 
     object Versions {
-        const val versionCode = 1
-        const val versionName = "1.0.0"
+        const val versionCode = 2
+        const val versionName = "1.0.2"
     }
 
 }
