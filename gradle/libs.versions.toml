@@ -1,13 +1,9 @@
 [versions]
-# SDK & Compile Versions
-compileSdk = "34"
-minSdk = "27"
-targetSdk = "34"
 
 # Kotlin & Core
 kotlin = "2.0.21"
-kotlinCoroutines = "1.7.3"
-kotlinSerialization = "1.7.3"
+kotlinCoroutines = "1.10.2"
+kotlinSerialization = "1.8.0"
 
 # Android Core
 androidGradlePlugin = "8.9.2"
@@ -18,7 +14,7 @@ androidxAppCompat = "1.6.1"
 
 # Jetpack Compose
 compose = "2024.09.03"
-composeNavigation = "2.8.0"
+composeNavigation = "2.9.6"
 
 composeMaterial3 = "1.1.2"
 

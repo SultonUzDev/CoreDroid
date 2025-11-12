@@ -30,8 +30,9 @@ include(":core:firebase")
 include(":feature:overview")
 include(":feature:battery")
 include(":feature:network")
-include(":feature:sensors")
+include(":feature:system")
 include(":feature:tools")
 include(":feature:settings")
 
 // Data modules
+include(":core:navigation")

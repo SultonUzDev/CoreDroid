@@ -2,6 +2,7 @@
 
 plugins {
     id("coredroid.android.feature")
+
     // ✨ This SINGLE plugin provides EVERYTHING:
     // ┌─ coredroid.android.library
     // │  ├─ Android library configuration

@@ -14,14 +14,9 @@ android {
 }
 
 dependencies {
-    implementation(project(":feature:overview"))
-    implementation(project(":feature:battery"))
-    implementation(project(":feature:network"))
-    implementation(project(":feature:sensors"))
-    implementation(project(":feature:tools"))
-    implementation(project(":feature:settings"))
-    implementation(project(":core:db"))
-
     // Core modules
     implementation(project(":core:firebase"))
+    implementation(project(":core:navigation"))
+    implementation(project(":core:ui"))
+    implementation(libs.navigation.compose)
 }
