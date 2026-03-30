@@ -15,7 +15,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CoreDroid Advanced"
+rootProject.name = "CoreDroid"
 
 // App module
 include(":app")
