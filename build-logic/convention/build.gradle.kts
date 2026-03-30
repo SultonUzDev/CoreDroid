@@ -1,7 +1,7 @@
 plugins {
     `kotlin-dsl`
 }
-group = "com.sultonuzdev.coredroidfull.buildlogic"
+group = "com.sultonuzdev.coredroid.buildlogic"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17

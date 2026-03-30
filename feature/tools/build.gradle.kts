@@ -1,4 +1,3 @@
-// ✅ OPTIMIZED with Convention Plugins
 
 plugins {
     id("coredroid.android.feature")
@@ -6,10 +5,7 @@ plugins {
 }
 
 dependencies {
-    // Example:
-// implementation(project(":data:device"))
-    // Each feature only includes its relevant data modules
+    implementation(project(":core:common"))
+    implementation(project(":core:domain"))
+    implementation(project(":core:ui"))
 }
-
-// 📊 REDUCTION: ~55 lines → ~15 lines (73% smaller!)
-// 🎯 BENEFIT: Change once in AndroidFeatureConventionPlugin, applies to all 10 features!
