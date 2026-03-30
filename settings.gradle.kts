@@ -25,6 +25,10 @@ include(":core:common")
 include(":core:ui")
 include(":core:db")
 include(":core:firebase")
+include(":core:navigation")
+include(":core:data")
+include(":core:domain")
+
 
 // Feature modules
 include(":feature:overview")
@@ -34,5 +38,4 @@ include(":feature:system")
 include(":feature:tools")
 include(":feature:settings")
 
-// Data modules
-include(":core:navigation")
+
