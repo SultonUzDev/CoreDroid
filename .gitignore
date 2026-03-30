@@ -1,18 +1,46 @@
 *.iml
-.gradle
-/local.properties
+
+
+
+.idea/
+.idea
+.kotling
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+
+
+# Gradle
+.gradle/
+local.properties
+
+
+
+
+# OS
 .DS_Store
-/build
+
+# Android Studio
 /captures
 .externalNativeBuild
 .cxx
-local.properties
-.idea
-.kotling
+
+
+
+
+# Build outputs
+**/build/
+*.apk
+*.aab
+
+# Signing
+*.keystore
+*.jks
+
+# KtLint
+.ktlint/
+
 
