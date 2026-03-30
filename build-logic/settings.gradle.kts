@@ -12,6 +12,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "build-logic"
-
-// App module
 include(":convention")
