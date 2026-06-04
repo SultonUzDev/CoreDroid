@@ -10,8 +10,9 @@ import android.net.NetworkCapabilities
 import android.net.wifi.WifiManager
 import android.os.Build
 import android.telephony.TelephonyManager
+import androidx.annotation.RequiresApi
 import androidx.annotation.RequiresPermission
-import com.sultonuzdev.coredroid.core.extensions.hasPermission
+import com.sultonuzdev.coredroid.core.common.extensions.hasPermission
 import com.sultonuzdev.coredroid.core.utils.Constants
 import com.sultonuzdev.coredroid.domain.model.NetworkInfo
 import kotlinx.coroutines.flow.Flow
@@ -104,7 +105,7 @@ class NetworkDataSource(private val context: Context) {
         } else "Unknown"
 
         // Mobile signal strength (requires READ_PHONE_STATE permission)
-        val mobileSignalStrength = if (isMobileConnected && context.hasPermission(Constants.PERMISSION_READ_PHONE_STATE)) {
+        val mobileSignalStrength = if (isMobileConnected && context.hasPermission(Constants.PERMISSION_READ_PHONE_STATE) && Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             try {
                 // Get signal strength from TelephonyManager
                 val signalStrengthInfo = telephonyManager.signalStrength
@@ -211,7 +212,7 @@ class NetworkDataSource(private val context: Context) {
         }
     }
 
-    @RequiresPermission(Manifest.permission.READ_PHONE_STATE)
+    @RequiresPermission("android.permission.READ_PHONE_STATE")
     private fun getNetworkType(telephonyManager: TelephonyManager): String {
         return try {
             when (telephonyManager.dataNetworkType) {
