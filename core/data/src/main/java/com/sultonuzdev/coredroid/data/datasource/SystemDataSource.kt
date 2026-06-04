@@ -3,6 +3,7 @@ package com.sultonuzdev.coredroid.data.datasource
 
 import android.content.Context
 import android.os.Build
+import androidx.annotation.RequiresPermission
 import com.sultonuzdev.coredroid.domain.model.SystemInfo
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
@@ -79,6 +80,7 @@ class SystemDataSource() {
         }
     }
 
+    @RequiresPermission("android.permission.READ_PRIVILEGED_PHONE_STATE")
     private fun getSerialNumber(): String {
         return try {
             Build.getSerial()
