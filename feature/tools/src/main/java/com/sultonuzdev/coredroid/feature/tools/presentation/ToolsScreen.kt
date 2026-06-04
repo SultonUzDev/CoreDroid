@@ -9,5 +9,8 @@ fun ToolsScreen(
     modifier: Modifier = Modifier
 ) {
 
-    EmptyState(modifier = modifier, title = "Tools")
+    EmptyState(
+        modifier = modifier,
+        title = "Tools"
+    )
 }
