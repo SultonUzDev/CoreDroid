@@ -23,7 +23,6 @@ import java.net.NetworkInterface
 
 class NetworkDataSource(private val context: Context) {
 
-    @RequiresApi(Build.VERSION_CODES.P)
     @SuppressLint("MissingPermission")
     fun getNetworkInfo(): Flow<NetworkInfo> = flow {
 
@@ -106,7 +105,7 @@ class NetworkDataSource(private val context: Context) {
         } else "Unknown"
 
         // Mobile signal strength (requires READ_PHONE_STATE permission)
-        val mobileSignalStrength = if (isMobileConnected && context.hasPermission(Constants.PERMISSION_READ_PHONE_STATE)) {
+        val mobileSignalStrength = if (isMobileConnected && context.hasPermission(Constants.PERMISSION_READ_PHONE_STATE) && Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             try {
                 // Get signal strength from TelephonyManager
                 val signalStrengthInfo = telephonyManager.signalStrength
@@ -213,7 +212,7 @@ class NetworkDataSource(private val context: Context) {
         }
     }
 
-    @RequiresPermission(Manifest.permission.READ_PHONE_STATE)
+    @RequiresPermission("android.permission.READ_PHONE_STATE")
     private fun getNetworkType(telephonyManager: TelephonyManager): String {
         return try {
             when (telephonyManager.dataNetworkType) {

@@ -97,14 +97,10 @@ fun CoreDroidTheme(
     dynamicColor: Boolean = false, // Set to true for Material You support
     content: @Composable () -> Unit
 ) {
-    val colorScheme = when {
-        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
-            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
-        }
-
-        darkTheme -> DarkColorScheme
-        else -> LightColorScheme
+    val colorScheme = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S && dynamicColor) {
+        getDynamicColorScheme(darkTheme, LocalContext.current)
+    } else {
+        if (darkTheme) DarkColorScheme else LightColorScheme
     }
 
 
@@ -114,6 +110,11 @@ fun CoreDroidTheme(
         content = content
     )
 }
+
+@android.annotation.SuppressLint("NewApi")
+@androidx.annotation.RequiresApi(Build.VERSION_CODES.S)
+private fun getDynamicColorScheme(darkTheme: Boolean, context: android.content.Context) =
+    if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
 
 // Theme Preview Composable
 @Composable
