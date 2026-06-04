@@ -10,8 +10,9 @@ import android.net.NetworkCapabilities
 import android.net.wifi.WifiManager
 import android.os.Build
 import android.telephony.TelephonyManager
+import androidx.annotation.RequiresApi
 import androidx.annotation.RequiresPermission
-import com.sultonuzdev.coredroid.core.extensions.hasPermission
+import com.sultonuzdev.coredroid.core.common.extensions.hasPermission
 import com.sultonuzdev.coredroid.core.utils.Constants
 import com.sultonuzdev.coredroid.domain.model.NetworkInfo
 import kotlinx.coroutines.flow.Flow
@@ -22,6 +23,7 @@ import java.net.NetworkInterface
 
 class NetworkDataSource(private val context: Context) {
 
+    @RequiresApi(Build.VERSION_CODES.P)
     @SuppressLint("MissingPermission")
     fun getNetworkInfo(): Flow<NetworkInfo> = flow {
 
