@@ -24,7 +24,7 @@ internal fun Project.configureKotlinAndroid(
 
 
         buildFeatures {
-            buildConfig = false
+            buildConfig = true
             aidl = false
             renderScript = false
             shaders = false

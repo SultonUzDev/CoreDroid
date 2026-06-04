@@ -3,30 +3,39 @@ package com.sultonuzdev.coredroid
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
+import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.sultonuzdev.coredroid.theme.CoreDroidTheme
+import androidx.navigation.compose.rememberNavController
+import com.sultonuzdev.coredroid.core.ui.theme.CoreDroidTheme
+import com.sultonuzdev.coredroid.navigation.bottom.BottomNavigationBar
+import com.sultonuzdev.coredroid.navigation.graph.CoreDroidNavGraph
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContent {
             CoreDroidTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Box(Modifier.fillMaxSize()) {
-                        Text("new core droid multi module")
-                    }
+                val navController = rememberNavController()
+
+                Scaffold(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .safeDrawingPadding(),
+                    containerColor = MaterialTheme.colorScheme.background,
+                    bottomBar = {
+                        BottomNavigationBar(navController = navController)
+                    }) { innerPadding ->
+                    CoreDroidNavGraph(
+                        navController = navController, modifier = Modifier.padding(innerPadding)
+                    )
                 }
             }
         }

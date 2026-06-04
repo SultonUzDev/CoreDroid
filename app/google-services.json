@@ -1,21 +1,40 @@
 {
   "project_info": {
-    "project_number": "962778338929",
-    "project_id": "coredroid-95666",
-    "storage_bucket": "coredroid-95666.firebasestorage.app"
+    "project_number": "686004247269",
+    "project_id": "coredroid-19850",
+    "storage_bucket": "coredroid-19850.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:962778338929:android:2ed3ab48d83c6fce07edd0",
+        "mobilesdk_app_id": "1:686004247269:android:583102c1aac66af98b920c",
         "android_client_info": {
-          "package_name": "com.sultonuzdev.coredroid.debug"
+          "package_name": "com.sultonuzdev.coredroid"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAU1YgSKGvNRQJie-3HOKcmEcGODIFj1Rs"
+          "current_key": "AIzaSyBxBApaUIvWLHPEUifrgmCJFVU-uv116GQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686004247269:android:8c744e6890f4e5f68b920c",
+        "android_client_info": {
+          "package_name": "com.sultonuzdev.coredroidfull"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxBApaUIvWLHPEUifrgmCJFVU-uv116GQ"
         }
       ],
       "services": {

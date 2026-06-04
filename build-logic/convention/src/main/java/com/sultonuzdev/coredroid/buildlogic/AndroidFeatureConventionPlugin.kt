@@ -4,7 +4,6 @@ import com.android.build.api.dsl.LibraryExtension
 import com.sultonuzdev.coredroid.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.internal.impldep.com.amazonaws.PredefinedClientConfigurations.defaultConfig
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
 
@@ -15,7 +14,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
             pluginManager.apply {
                 apply("coredroid.android.library")
                 apply("coredroid.android.compose")
-                apply("coredroid.android.koin")
+                apply("coredroid.android.hilt")
             }
             extensions.configure<LibraryExtension> {
                 defaultConfig {
@@ -26,12 +25,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
             }
             dependencies {
                 add("implementation", project(":core:common"))
-                add("implementation", project(":core:designsystem"))
-                add("implementation", project(":core:model"))
-                add("implementation", project(":core:navigation"))
-
-                add("testImplementation", project(":core:testing"))
-                add("androidTestImplementation", project(":core:testing"))
+                add("implementation", project(":core:ui"))
 
                 add("implementation", libs.findLibrary("navigation.compose").get())
                 add("implementation", libs.findBundle("coroutines").get())
