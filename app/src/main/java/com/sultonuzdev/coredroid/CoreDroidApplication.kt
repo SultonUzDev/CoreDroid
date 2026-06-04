@@ -1,7 +1,6 @@
 package com.sultonuzdev.coredroid
 
 import android.app.Application
-import com.sultonuzdev.coredroid.BuildConfig
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 
@@ -13,7 +12,5 @@ class CoreDroidApplication : Application() {
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
         }
-
-
     }
 }
