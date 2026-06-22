@@ -7,5 +7,6 @@ plugins {
 
 dependencies {
     implementation(project(":core:common"))
+    implementation(libs.androidx.ui.text.google.fonts)
 
 }
