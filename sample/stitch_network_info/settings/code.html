@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CoreDroid Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#bbc5eb",
+                      "inverse-primary": "#006688",
+                      "surface-container-highest": "#333348",
+                      "primary-fixed-dim": "#75d1ff",
+                      "on-secondary-fixed-variant": "#3b4665",
+                      "on-error-container": "#ffdad6",
+                      "secondary-container": "#3b4665",
+                      "tertiary-fixed-dim": "#a9c8fc",
+                      "on-primary-fixed-variant": "#004d67",
+                      "error": "#ffb4ab",
+                      "on-tertiary-fixed": "#001b3c",
+                      "on-secondary-container": "#aab4d9",
+                      "tertiary-fixed": "#d5e3ff",
+                      "on-primary": "#003548",
+                      "on-primary-container": "#004e69",
+                      "primary-fixed": "#c2e8ff",
+                      "on-surface": "#e2e0fc",
+                      "on-tertiary-container": "#284875",
+                      "surface-dim": "#111125",
+                      "on-secondary-fixed": "#0f1a37",
+                      "inverse-on-surface": "#2f2e43",
+                      "on-secondary": "#252f4d",
+                      "outline-variant": "#3e484f",
+                      "primary": "#9adbff",
+                      "surface": "#111125",
+                      "on-error": "#690005",
+                      "error-container": "#93000a",
+                      "inverse-surface": "#e2e0fc",
+                      "surface-container": "#1e1e32",
+                      "on-tertiary-fixed-variant": "#274774",
+                      "primary-container": "#4fc3f7",
+                      "surface-tint": "#75d1ff",
+                      "background": "#111125",
+                      "on-background": "#e2e0fc",
+                      "surface-container-lowest": "#0c0c1f",
+                      "tertiary": "#bbd4ff",
+                      "on-surface-variant": "#bdc8d0",
+                      "surface-bright": "#37374d",
+                      "surface-container-high": "#28283d",
+                      "secondary-fixed": "#dae1ff",
+                      "secondary": "#bbc5eb",
+                      "on-primary-fixed": "#001e2b",
+                      "surface-container-low": "#1a1a2e",
+                      "outline": "#889299",
+                      "on-tertiary": "#09305c",
+                      "tertiary-container": "#99b8ec",
+                      "surface-variant": "#333348"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "stack-sm": "4px",
+                      "stack-lg": "24px",
+                      "stack-md": "12px",
+                      "gutter": "16px",
+                      "margin-tablet": "24px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "title-lg": [
+                              "Roboto Flex", "sans-serif"
+                      ],
+                      "body-lg": [
+                              "Roboto Flex", "sans-serif"
+                      ],
+                      "label-lg": [
+                              "Roboto Flex", "sans-serif"
+                      ],
+                      "headline-lg-mobile": [
+                              "Roboto Flex", "sans-serif"
+                      ],
+                      "label-sm": [
+                              "Roboto Flex", "sans-serif"
+                      ],
+                      "display-lg": [
+                              "Roboto Flex", "sans-serif"
+                      ],
+                      "headline-lg": [
+                              "Roboto Flex", "sans-serif"
+                      ],
+                      "body-md": [
+                              "Roboto Flex", "sans-serif"
+                      ]
+              },
+              "fontSize": {
+                      "title-lg": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "11px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg": [
+                              "57px",
+                              {
+                                      "lineHeight": "64px",
+                                      "letterSpacing": "-0.25px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.25px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Roboto Flex', sans-serif;
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        
+        /* Custom Toggle Switch Styles based on M3 */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: theme('colors.primary');
+            background-color: theme('colors.on-primary');
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: theme('colors.primary');
+        }
+        .toggle-checkbox {
+            right: 0;
+            z-index: 1;
+            border-color: theme('colors.outline');
+            background-color: theme('colors.outline');
+            transition: all 0.3s;
+        }
+        .toggle-label {
+            width: 52px;
+            height: 32px;
+            background-color: theme('colors.surface-container-highest');
+            border: 2px solid theme('colors.outline');
+            border-radius: 9999px;
+            transition: all 0.3s;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            border-color: theme('colors.primary');
+        }
+        .toggle-checkbox-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: theme('colors.on-primary');
+            font-size: 16px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .toggle-checkbox:checked ~ .toggle-checkbox-icon {
+            opacity: 1;
+        }
+        
+        /* Glassmorphism effects */
+        .glass-card {
+            background: linear-gradient(180deg, rgba(22, 33, 62, 0.8) 0%, rgba(22, 33, 62, 0.6) 100%);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.2);
+        }
+
+        .setting-item-hover {
+            transition: background-color 0.2s ease;
+        }
+        .setting-item-hover:hover {
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-margin-mobile h-16 bg-background dark:bg-surface-dim docked full-width top-0 sticky z-50">
+<button aria-label="Go back" class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-variant/50 transition-colors duration-200 active:scale-95">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="flex-1 flex justify-center">
+<h1 class="font-title-lg text-title-lg font-bold text-primary dark:text-primary-fixed-dim tracking-tight">Settings</h1>
+</div>
+<div class="w-10 h-10"></div> <!-- Spacer for center alignment -->
+</header>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto px-margin-mobile pb-stack-lg pt-stack-sm space-y-stack-lg">
+<!-- Preferences Section -->
+<section class="space-y-stack-md">
+<h2 class="font-label-lg text-label-lg text-primary px-4 uppercase tracking-wider">Preferences</h2>
+<div class="glass-card rounded-xl overflow-hidden flex flex-col">
+<!-- Notifications -->
+<div class="flex items-center justify-between p-4 setting-item-hover border-b border-white/5 min-h-[72px]">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+<div>
+<h3 class="font-body-lg text-body-lg text-on-surface">Notifications</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">System alerts and warnings</p>
+</div>
+</div>
+<div class="relative inline-block w-[52px] align-middle select-none">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-on-primary appearance-none cursor-pointer top-1" id="toggle-notifications" name="toggle-notifications" style="transform: translateX(-4px);" type="checkbox"/>
+<label class="toggle-label block overflow-hidden cursor-pointer" for="toggle-notifications"></label>
+<span class="material-symbols-outlined toggle-checkbox-icon pointer-events-none" style="transform: translate(6px, -50%);">check</span>
+</div>
+</div>
+<!-- Dark Theme -->
+<div class="flex items-center justify-between p-4 setting-item-hover border-b border-white/5 min-h-[72px]">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="dark_mode">dark_mode</span>
+<div>
+<h3 class="font-body-lg text-body-lg text-on-surface">Dark Theme</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Reduce eye strain</p>
+</div>
+</div>
+<div class="relative inline-block w-[52px] align-middle select-none">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-on-primary appearance-none cursor-pointer top-1" id="toggle-dark-mode" name="toggle-dark-mode" style="transform: translateX(-4px);" type="checkbox"/>
+<label class="toggle-label block overflow-hidden cursor-pointer" for="toggle-dark-mode"></label>
+<span class="material-symbols-outlined toggle-checkbox-icon pointer-events-none" style="transform: translate(6px, -50%);">check</span>
+</div>
+</div>
+<!-- High Refresh Rate -->
+<div class="flex items-center justify-between p-4 setting-item-hover min-h-[72px]">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="speed">speed</span>
+<div>
+<h3 class="font-body-lg text-body-lg text-on-surface">High Refresh Rate</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Smoother animations (uses more battery)</p>
+</div>
+</div>
+<div class="relative inline-block w-[52px] align-middle select-none">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-outline appearance-none cursor-pointer top-1 left-1" id="toggle-refresh" name="toggle-refresh" type="checkbox"/>
+<label class="toggle-label block overflow-hidden cursor-pointer" for="toggle-refresh"></label>
+</div>
+</div>
+</div>
+</section>
+<!-- Data Section -->
+<section class="space-y-stack-md">
+<h2 class="font-label-lg text-label-lg text-primary px-4 uppercase tracking-wider">Data</h2>
+<div class="glass-card rounded-xl overflow-hidden flex flex-col">
+<!-- Refresh Interval -->
+<div class="flex items-center justify-between p-4 setting-item-hover min-h-[72px]">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="update">update</span>
+<div>
+<h3 class="font-body-lg text-body-lg text-on-surface">Data Refresh Interval</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Frequency of telemetry updates</p>
+</div>
+</div>
+<div class="relative">
+<select class="appearance-none bg-surface-container text-on-surface font-body-md text-body-md py-2 pl-4 pr-10 rounded-lg border border-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent cursor-pointer">
+<option value="1s">1s</option>
+<option selected="" value="5s">5s</option>
+<option value="10s">10s</option>
+<option value="30s">30s</option>
+<option value="60s">60s</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="arrow_drop_down" style="font-size: 20px;">arrow_drop_down</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="space-y-stack-md pt-4">
+<h2 class="font-label-lg text-label-lg text-primary px-4 uppercase tracking-wider">About</h2>
+<div class="glass-card rounded-xl p-6 text-center space-y-4">
+<div class="w-20 h-20 mx-auto bg-surface-container rounded-full flex items-center justify-center mb-2 border border-white/10 shadow-lg relative overflow-hidden">
+<div class="absolute inset-0 bg-primary opacity-10"></div>
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="memory">memory</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">CoreDroid</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Version 4.2.0 (Build 8492)</p>
+</div>
+<div class="flex justify-center space-x-4 pt-2">
+<button class="font-label-lg text-label-lg text-primary hover:text-primary-fixed transition-colors">Terms</button>
+<span class="text-outline-variant">•</span>
+<button class="font-label-lg text-label-lg text-primary hover:text-primary-fixed transition-colors">Privacy</button>
+<span class="text-outline-variant">•</span>
+<button class="font-label-lg text-label-lg text-primary hover:text-primary-fixed transition-colors">Licenses</button>
+</div>
+</div>
+</section>
+</main>
+<script>
+        // Simple logic to handle toggle UI state visually
+        document.querySelectorAll('.toggle-checkbox').forEach(toggle => {
+            toggle.addEventListener('change', function() {
+                if(this.checked) {
+                    this.style.transform = 'translateX(-4px)';
+                    this.style.left = 'auto';
+                    this.style.right = '0';
+                    this.classList.remove('bg-outline');
+                    this.classList.add('bg-on-primary');
+                } else {
+                    this.style.transform = 'none';
+                    this.style.right = 'auto';
+                    this.style.left = '4px';
+                    this.classList.remove('bg-on-primary');
+                    this.classList.add('bg-outline');
+                }
+            });
+            
+            // Set initial state
+            if(toggle.checked) {
+                toggle.style.transform = 'translateX(-4px)';
+                toggle.style.left = 'auto';
+                toggle.style.right = '0';
+                toggle.classList.remove('bg-outline');
+                toggle.classList.add('bg-on-primary');
+            } else {
+                toggle.style.transform = 'none';
+                toggle.style.right = 'auto';
+                toggle.style.left = '4px';
+                toggle.classList.remove('bg-on-primary');
+                toggle.classList.add('bg-outline');
+            }
+        });
+    </script>
+</body></html>

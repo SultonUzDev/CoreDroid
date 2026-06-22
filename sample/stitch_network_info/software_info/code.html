@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CoreDroid - Software</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#bbc5eb",
+                        "inverse-primary": "#006688",
+                        "surface-container-highest": "#333348",
+                        "primary-fixed-dim": "#75d1ff",
+                        "on-secondary-fixed-variant": "#3b4665",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#3b4665",
+                        "tertiary-fixed-dim": "#a9c8fc",
+                        "on-primary-fixed-variant": "#004d67",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#001b3c",
+                        "on-secondary-container": "#aab4d9",
+                        "tertiary-fixed": "#d5e3ff",
+                        "on-primary": "#003548",
+                        "on-primary-container": "#004e69",
+                        "primary-fixed": "#c2e8ff",
+                        "on-surface": "#e2e0fc",
+                        "on-tertiary-container": "#284875",
+                        "surface-dim": "#111125",
+                        "on-secondary-fixed": "#0f1a37",
+                        "inverse-on-surface": "#2f2e43",
+                        "on-secondary": "#252f4d",
+                        "outline-variant": "#3e484f",
+                        "primary": "#9adbff",
+                        "surface": "#111125",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "inverse-surface": "#e2e0fc",
+                        "surface-container": "#1e1e32",
+                        "on-tertiary-fixed-variant": "#274774",
+                        "primary-container": "#4fc3f7",
+                        "surface-tint": "#75d1ff",
+                        "background": "#111125",
+                        "on-background": "#e2e0fc",
+                        "surface-container-lowest": "#0c0c1f",
+                        "tertiary": "#bbd4ff",
+                        "on-surface-variant": "#bdc8d0",
+                        "surface-bright": "#37374d",
+                        "surface-container-high": "#28283d",
+                        "secondary-fixed": "#dae1ff",
+                        "secondary": "#bbc5eb",
+                        "on-primary-fixed": "#001e2b",
+                        "surface-container-low": "#1a1a2e",
+                        "outline": "#889299",
+                        "on-tertiary": "#09305c",
+                        "tertiary-container": "#99b8ec",
+                        "surface-variant": "#333348"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "stack-sm": "4px",
+                        "stack-lg": "24px",
+                        "stack-md": "12px",
+                        "gutter": "16px",
+                        "margin-tablet": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "title-lg": ["Roboto Flex"],
+                        "body-lg": ["Roboto Flex"],
+                        "label-lg": ["Roboto Flex"],
+                        "headline-lg-mobile": ["Roboto Flex"],
+                        "label-sm": ["Roboto Flex"],
+                        "display-lg": ["Roboto Flex"],
+                        "headline-lg": ["Roboto Flex"],
+                        "body-md": ["Roboto Flex"]
+                    },
+                    "fontSize": {
+                        "title-lg": ["22px", { "lineHeight": "28px", "fontWeight": "500" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500" }],
+                        "display-lg": ["57px", { "lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            font-family: 'Roboto Flex', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .tech-sheen {
+            position: relative;
+        }
+        .tech-sheen::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(117, 209, 255, 0.05), transparent);
+            pointer-events: none;
+            border-radius: inherit;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen pb-[100px]">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background dark:bg-surface-dim flat no shadows flex justify-between items-center px-margin-mobile h-16">
+<button aria-label="Menu" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-variant/50 dark:hover:bg-surface-container-highest/50 transition-colors duration-200 active:scale-95 text-primary dark:text-primary-fixed-dim">
+<span class="material-symbols-outlined text-2xl">memory</span>
+</button>
+<h1 class="font-title-lg text-title-lg font-bold text-primary dark:text-primary-fixed-dim">CoreDroid</h1>
+<button aria-label="Settings" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-variant/50 dark:hover:bg-surface-container-highest/50 transition-colors duration-200 active:scale-95 text-primary dark:text-primary-fixed-dim">
+<span class="material-symbols-outlined text-2xl">settings</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="pt-20 px-margin-mobile max-w-7xl mx-auto flex flex-col gap-stack-lg">
+<!-- Header Section -->
+<section class="flex flex-col gap-stack-sm mb-4">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Software Inventory</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Real-time analysis of installed applications and system integrity.</p>
+</section>
+<!-- Bento Grid Layout for Stats -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<!-- Installed Apps Card -->
+<article class="col-span-1 md:col-span-2 bg-surface-container-low tech-sheen rounded-xl border border-white/5 p-4 flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full blur-xl group-hover:bg-primary/10 transition-colors duration-500"></div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-xl">apps</span>
+<h3 class="font-label-lg text-label-lg text-on-surface-variant">Installed Apps</h3>
+</div>
+<div>
+<p class="font-display-lg text-display-lg text-primary">142</p>
+<p class="font-label-sm text-label-sm text-primary/70 mt-1">User installed applications</p>
+</div>
+</article>
+<!-- System Apps Card -->
+<article class="col-span-1 md:col-span-2 bg-surface-container-low tech-sheen rounded-xl border border-white/5 p-4 flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -left-4 -bottom-4 w-32 h-32 bg-secondary/5 rounded-full blur-xl group-hover:bg-secondary/10 transition-colors duration-500"></div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary text-xl">build</span>
+<h3 class="font-label-lg text-label-lg text-on-surface-variant">System Apps</h3>
+</div>
+<div>
+<p class="font-display-lg text-display-lg text-secondary">85</p>
+<p class="font-label-sm text-label-sm text-secondary/70 mt-1">Core OS components</p>
+</div>
+</article>
+<!-- Security Patch Card -->
+<article class="col-span-2 md:col-span-2 bg-surface-container-low tech-sheen rounded-xl border border-white/5 p-4 flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-lg">security</span>
+<h3 class="font-label-lg text-label-lg text-on-surface-variant">Security Patch</h3>
+</div>
+<p class="font-title-lg text-title-lg text-on-surface">October 1, 2023</p>
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-tertiary-fixed-dim/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary-fixed-dim">verified_user</span>
+</div>
+</article>
+<!-- Play Services Card -->
+<article class="col-span-2 md:col-span-2 bg-surface-container-low tech-sheen rounded-xl border border-white/5 p-4 flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">play_circle</span>
+<h3 class="font-label-lg text-label-lg text-on-surface-variant">Play Services</h3>
+</div>
+<p class="font-title-lg text-title-lg text-on-surface font-mono">23.40.14</p>
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">update</span>
+</div>
+</article>
+</section>
+<!-- Detailed List Placeholder -->
+<section class="mt-stack-lg flex flex-col gap-stack-md">
+<h3 class="font-title-lg text-title-lg text-on-surface">Recent Updates</h3>
+<div class="bg-surface-container-low rounded-xl border border-white/5 p-4 flex items-center justify-between tech-sheen">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface">terminal</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Core Shell</p>
+<p class="font-body-md text-body-md text-on-surface-variant">v1.2.4 • Updated today</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-2 py-1 rounded">Stable</span>
+</div>
+<div class="bg-surface-container-low rounded-xl border border-white/5 p-4 flex items-center justify-between tech-sheen">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface">network_node</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">NetDaemon</p>
+<p class="font-body-md text-body-md text-on-surface-variant">v3.0.1 • Updated yesterday</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-2 py-1 rounded">Stable</span>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-base pb-safe h-20 bg-surface-container dark:bg-surface-container flat no shadows md:hidden rounded-t-none">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300 ease-in-out group">
+<div class="group-hover:bg-surface-variant/50 px-4 py-1 rounded-full transition-colors mb-1">
+<span class="material-symbols-outlined">dashboard</span>
+</div>
+<span class="font-label-sm text-label-sm">Overview</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300 ease-in-out group">
+<div class="group-hover:bg-surface-variant/50 px-4 py-1 rounded-full transition-colors mb-1">
+<span class="material-symbols-outlined">wifi</span>
+</div>
+<span class="font-label-sm text-label-sm">Network</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300 ease-in-out group">
+<div class="group-hover:bg-surface-variant/50 px-4 py-1 rounded-full transition-colors mb-1">
+<span class="material-symbols-outlined">settings_suggest</span>
+</div>
+<span class="font-label-sm text-label-sm">System</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary-container text-on-secondary-container dark:text-on-secondary-container rounded-full px-5 py-1 transition-all duration-300 ease-in-out">
+<div class="mb-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">apps</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold">Software</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300 ease-in-out group">
+<div class="group-hover:bg-surface-variant/50 px-4 py-1 rounded-full transition-colors mb-1">
+<span class="material-symbols-outlined">developer_board</span>
+</div>
+<span class="font-label-sm text-label-sm">Hardware</span>
+</button>
+</nav>
+<!-- Desktop Nav Sidebar placeholder (hidden on mobile, shown on md up) -->
+<aside class="hidden md:flex fixed left-0 top-16 bottom-0 w-64 bg-surface-container flex-col p-4 gap-2 border-r border-white/5 z-40">
+<button class="flex items-center gap-4 text-on-surface-variant hover:text-primary hover:bg-surface-variant/50 p-3 rounded-lg transition-colors text-left w-full">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-lg text-label-lg">Overview</span>
+</button>
+<button class="flex items-center gap-4 text-on-surface-variant hover:text-primary hover:bg-surface-variant/50 p-3 rounded-lg transition-colors text-left w-full">
+<span class="material-symbols-outlined">wifi</span>
+<span class="font-label-lg text-label-lg">Network</span>
+</button>
+<button class="flex items-center gap-4 text-on-surface-variant hover:text-primary hover:bg-surface-variant/50 p-3 rounded-lg transition-colors text-left w-full">
+<span class="material-symbols-outlined">settings_suggest</span>
+<span class="font-label-lg text-label-lg">System</span>
+</button>
+<button class="flex items-center gap-4 bg-secondary-container text-on-secondary-container p-3 rounded-lg transition-colors text-left w-full font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">apps</span>
+<span class="font-label-lg text-label-lg">Software</span>
+</button>
+<button class="flex items-center gap-4 text-on-surface-variant hover:text-primary hover:bg-surface-variant/50 p-3 rounded-lg transition-colors text-left w-full">
+<span class="material-symbols-outlined">developer_board</span>
+<span class="font-label-lg text-label-lg">Hardware</span>
+</button>
+</aside>
+<!-- Adjust main content padding for desktop sidebar -->
+<style>
+        @media (min-width: 768px) {
+            main {
+                padding-left: calc(16rem + theme('spacing.margin-tablet'));
+                padding-right: theme('spacing.margin-tablet');
+            }
+        }
+    </style>
+</body></html>

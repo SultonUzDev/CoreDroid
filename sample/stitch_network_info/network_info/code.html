@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CoreDroid - Network</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#bbc5eb",
+                    "inverse-primary": "#006688",
+                    "surface-container-highest": "#333348",
+                    "primary-fixed-dim": "#75d1ff",
+                    "on-secondary-fixed-variant": "#3b4665",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#3b4665",
+                    "tertiary-fixed-dim": "#a9c8fc",
+                    "on-primary-fixed-variant": "#004d67",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed": "#001b3c",
+                    "on-secondary-container": "#aab4d9",
+                    "tertiary-fixed": "#d5e3ff",
+                    "on-primary": "#003548",
+                    "on-primary-container": "#004e69",
+                    "primary-fixed": "#c2e8ff",
+                    "on-surface": "#e2e0fc",
+                    "on-tertiary-container": "#284875",
+                    "surface-dim": "#111125",
+                    "on-secondary-fixed": "#0f1a37",
+                    "inverse-on-surface": "#2f2e43",
+                    "on-secondary": "#252f4d",
+                    "outline-variant": "#3e484f",
+                    "primary": "#9adbff",
+                    "surface": "#111125",
+                    "on-error": "#690005",
+                    "error-container": "#93000a",
+                    "inverse-surface": "#e2e0fc",
+                    "surface-container": "#1e1e32",
+                    "on-tertiary-fixed-variant": "#274774",
+                    "primary-container": "#4fc3f7",
+                    "surface-tint": "#75d1ff",
+                    "background": "#111125",
+                    "on-background": "#e2e0fc",
+                    "surface-container-lowest": "#0c0c1f",
+                    "tertiary": "#bbd4ff",
+                    "on-surface-variant": "#bdc8d0",
+                    "surface-bright": "#37374d",
+                    "surface-container-high": "#28283d",
+                    "secondary-fixed": "#dae1ff",
+                    "secondary": "#bbc5eb",
+                    "on-primary-fixed": "#001e2b",
+                    "surface-container-low": "#1a1a2e",
+                    "outline": "#889299",
+                    "on-tertiary": "#09305c",
+                    "tertiary-container": "#99b8ec",
+                    "surface-variant": "#333348"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "stack-sm": "4px",
+                    "stack-lg": "24px",
+                    "stack-md": "12px",
+                    "gutter": "16px",
+                    "margin-tablet": "24px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "title-lg": [
+                            "robotoFlex"
+                    ],
+                    "body-lg": [
+                            "robotoFlex"
+                    ],
+                    "label-lg": [
+                            "robotoFlex"
+                    ],
+                    "headline-lg-mobile": [
+                            "robotoFlex"
+                    ],
+                    "label-sm": [
+                            "robotoFlex"
+                    ],
+                    "display-lg": [
+                            "robotoFlex"
+                    ],
+                    "headline-lg": [
+                            "robotoFlex"
+                    ],
+                    "body-md": [
+                            "robotoFlex"
+                    ]
+            },
+            "fontSize": {
+                    "title-lg": [
+                            "22px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-lg": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "letterSpacing": "0.5px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-lg": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.1px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "28px",
+                            {
+                                    "lineHeight": "36px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-sm": [
+                            "11px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.5px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-lg": [
+                            "57px",
+                            {
+                                    "lineHeight": "64px",
+                                    "letterSpacing": "-0.25px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.25px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .glass-card {
+            background-color: #16213E; /* Surface Navy Blue */
+            position: relative;
+        }
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: theme('colors.primary');
+            opacity: 0.05; /* 5% Electric Blue tint */
+            pointer-events: none;
+            border-radius: inherit;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen flex flex-col pb-24">
+<!-- TopAppBar -->
+<header class="bg-background dark:bg-surface-dim docked full-width top-0 flat no shadows flex justify-between items-center w-full px-margin-mobile h-16 sticky z-40 transition-colors duration-200">
+<button class="text-primary dark:text-primary-fixed-dim hover:bg-surface-variant/50 dark:hover:bg-surface-container-highest/50 transition-colors duration-200 active:scale-95 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="memory">memory</span>
+</button>
+<h1 class="font-title-lg text-title-lg font-bold text-primary dark:text-primary-fixed-dim">CoreDroid</h1>
+<button class="text-primary dark:text-primary-fixed-dim hover:bg-surface-variant/50 dark:hover:bg-surface-container-highest/50 transition-colors duration-200 active:scale-95 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-margin-mobile pt-stack-md pb-stack-lg space-y-stack-lg max-w-4xl mx-auto w-full">
+<!-- Network Hero/Status -->
+<section class="glass-card rounded-xl p-6 border border-white/10 overflow-hidden relative">
+<div class="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none"></div>
+<div class="flex items-center justify-between mb-stack-md relative z-10">
+<div class="flex items-center space-x-3">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary border border-primary/30">
+<span class="material-symbols-outlined text-3xl" data-icon="wifi">wifi</span>
+</div>
+<div>
+<h2 class="font-title-lg text-title-lg text-on-surface">Home_5G</h2>
+<p class="font-body-md text-body-md text-primary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                            Connected
+                        </p>
+</div>
+</div>
+<div class="text-right">
+<div class="flex items-end gap-1 text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="signal_cellular_4_bar" data-weight="fill" style="font-variation-settings: 'FILL' 1;">signal_cellular_4_bar</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Excellent</span>
+</div>
+</div>
+<div class="mt-stack-lg relative z-10">
+<div class="flex justify-between items-end mb-2">
+<span class="font-label-lg text-label-lg text-on-surface-variant">Signal Strength</span>
+<span class="font-title-lg text-title-lg text-primary">-45 dBm</span>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%] rounded-full shadow-[0_0_10px_rgba(154,219,255,0.5)]"></div>
+</div>
+</div>
+</section>
+<!-- Bento Grid for Details -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Connection Speed -->
+<div class="glass-card rounded-xl p-4 border border-white/10 flex flex-col justify-between min-h-[120px]">
+<div class="flex items-center gap-2 text-on-surface-variant mb-2">
+<span class="material-symbols-outlined text-xl" data-icon="speed">speed</span>
+<h3 class="font-label-lg text-label-lg">Link Speed</h3>
+</div>
+<div>
+<div class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface text-primary">450 <span class="font-body-md text-body-md text-on-surface-variant">Mbps</span></div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Tx/Rx Rate</p>
+</div>
+</div>
+<!-- IP Address -->
+<div class="glass-card rounded-xl p-4 border border-white/10 flex flex-col justify-between min-h-[120px]">
+<div class="flex items-center gap-2 text-on-surface-variant mb-2">
+<span class="material-symbols-outlined text-xl" data-icon="dns">dns</span>
+<h3 class="font-label-lg text-label-lg">IPv4 Address</h3>
+</div>
+<div>
+<div class="font-title-lg text-title-lg text-on-surface tracking-wide">192.168.1.15</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Local Network</p>
+</div>
+</div>
+<!-- MAC Address -->
+<div class="glass-card rounded-xl p-4 border border-white/10 flex flex-col justify-between min-h-[120px] md:col-span-2">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2 text-on-surface-variant mb-2">
+<span class="material-symbols-outlined text-xl" data-icon="fingerprint">fingerprint</span>
+<h3 class="font-label-lg text-label-lg">Physical Address (MAC)</h3>
+</div>
+<button class="text-primary hover:bg-surface-variant/50 p-1 rounded transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="content_copy">content_copy</span>
+</button>
+</div>
+<div>
+<div class="font-title-lg text-title-lg text-on-surface font-mono tracking-widest text-primary-fixed-dim">00:1A:2B:3C:4D:5E</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Hardware Identifier</p>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="glass-card rounded-xl p-4 border border-white/10 md:col-span-2 grid grid-cols-2 gap-4">
+<button class="bg-surface-container-high hover:bg-surface-variant transition-colors rounded-lg py-3 flex flex-col items-center justify-center gap-2 border border-white/5 active:scale-95">
+<span class="material-symbols-outlined text-on-surface" data-icon="sync">sync</span>
+<span class="font-label-sm text-label-sm text-on-surface">Refresh Network</span>
+</button>
+<button class="bg-surface-container-high hover:bg-surface-variant transition-colors rounded-lg py-3 flex flex-col items-center justify-center gap-2 border border-white/5 active:scale-95">
+<span class="material-symbols-outlined text-on-surface" data-icon="network_check">network_check</span>
+<span class="font-label-sm text-label-sm text-on-surface">Run Diagnostics</span>
+</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="bg-surface-container dark:bg-surface-container docked full-width bottom-0 rounded-t-none flat no shadows fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-base pb-safe h-20 md:hidden">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-sm text-label-sm mt-1">Overview</span>
+</button>
+<!-- Active Tab: Network -->
+<button class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary-container text-on-secondary-container dark:text-on-secondary-container rounded-full px-5 py-1 transition-all duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="wifi" data-weight="fill" style="font-variation-settings: 'FILL' 1;">wifi</span>
+<span class="font-label-sm text-label-sm mt-1 font-bold">Network</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="settings_suggest">settings_suggest</span>
+<span class="font-label-sm text-label-sm mt-1">System</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="apps">apps</span>
+<span class="font-label-sm text-label-sm mt-1">Software</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="developer_board">developer_board</span>
+<span class="font-label-sm text-label-sm mt-1">Hardware</span>
+</button>
+</nav>
+<!-- SideNav Placeholder for Desktop (Hidden on Mobile) -->
+<aside class="hidden md:flex flex-col w-64 bg-surface-container h-screen fixed left-0 top-16 border-r border-white/5 pt-4">
+<div class="px-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-variant/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-lg text-label-lg">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-secondary-container text-on-secondary-container transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="wifi" data-weight="fill" style="font-variation-settings: 'FILL' 1;">wifi</span>
+<span class="font-label-lg text-label-lg font-bold">Network</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-variant/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings_suggest">settings_suggest</span>
+<span class="font-label-lg text-label-lg">System</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-variant/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="apps">apps</span>
+<span class="font-label-lg text-label-lg">Software</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-variant/50 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="developer_board">developer_board</span>
+<span class="font-label-lg text-label-lg">Hardware</span>
+</a>
+</div>
+</aside>
+<!-- Adjust main content padding for desktop sidenav -->
+<style>
+        @media (min-width: 768px) {
+            main {
+                padding-left: calc(16rem + 24px); /* 64 w-64 = 16rem + margin */
+            }
+        }
+    </style>
+</body></html>

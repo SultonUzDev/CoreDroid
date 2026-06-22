@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -37,12 +38,14 @@ fun EmptyState(
                 modifier = Modifier.size(CoreDroidDimensions.IconSizeLarge)
             )
 
-            Text(
-                text = title,
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                textAlign = TextAlign.Center
-            )
+
+            Button(onClick = {}) {
+
+                Text(
+                    text = title,
+                    textAlign = TextAlign.Center
+                )
+            }
         }
     }
 }
